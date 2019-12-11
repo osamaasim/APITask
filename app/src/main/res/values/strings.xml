@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">APITask</string>
     <string name="null_data">No Data Received</string>
+    <string name="news_image">news_image</string>
 </resources>
