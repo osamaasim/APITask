@@ -5,14 +5,15 @@ import android.os.Bundle;
 import android.support.v7.widget.DividerItemDecoration;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.View;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.osama.apitask.ArticleApplication;
-import com.example.osama.apitask.Model.APIHandler;
-import com.example.osama.apitask.Model.News;
+import com.example.osama.apitask.model.APIHandler;
+import com.example.osama.apitask.model.News;
 import com.example.osama.apitask.R;
 import com.example.osama.apitask.Server.ApiClient;
 import com.example.osama.apitask.Server.ApiInterface;
@@ -27,6 +28,8 @@ import java.util.List;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
+
+import static com.example.osama.apitask.Utils.ApiKey.API_KEY;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -44,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
         inits();
 
         if (ConnecUtil.isOnline(this)) {
-            callApi("all-sections", "1"); // for section - all-sections, sports, international
+            callApi("all", "all"); // for section - all-sections, sports, international
         } else {
             Toast.makeText(MainActivity.this, "No network connection. Loaded Offline data", Toast.LENGTH_LONG).show();
             getSavedData();
@@ -63,7 +66,8 @@ public class MainActivity extends AppCompatActivity {
 
     private void callApi(String section, String period) {
         ApiInterface apiService = ApiClient.getClient().create(ApiInterface.class);
-        Call<APIHandler> call = apiService.getNewsDetails(section, period, ApiKey.API_KEY);
+        Call<APIHandler> call = apiService.getNewsDetails(section, period, API_KEY);
+        Log.d("TAG", String.valueOf(API_KEY));
         call.enqueue(new Callback<APIHandler>() {
             @Override
             public void onResponse(Call<APIHandler> call, Response<APIHandler> response) {
@@ -88,7 +92,7 @@ public class MainActivity extends AppCompatActivity {
     private void saveData(List<News> newsList) {
         //LIST DATA CONVERT TO GSON STRING
         String gsonStr = gson.toJson(newsList, listType);
-
+        Log.d("TAG", String.valueOf(gsonStr));
         //SAVE IN SHARED-PREFERENCE
         ArticleApplication.setNewsList(this, gsonStr);
 

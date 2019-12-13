@@ -1,16 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
     <data class="NewsDataBinding">
 
         <variable
             name="news"
-            type="com.example.osama.apitask.Model.News" />
+            type="com.example.osama.apitask.model.News" />
 
         <variable
             name="handler"
-            type="com.example.osama.apitask.ClickHandler.DetailsIntent" />
+            type="com.example.osama.apitask.clickHandler.DetailsIntent" />
     </data>
 
     <LinearLayout
@@ -24,7 +26,7 @@
         android:padding="10dp"
         android:weightSum="100">
 
-    <!--Photo Image android:src="@{news.photoUrl}" -->
+    <!--Photo Image android:src="@{news.multimedia.url}" -->
     <ImageView
         android:layout_width="0dp"
         android:layout_height="70dp"

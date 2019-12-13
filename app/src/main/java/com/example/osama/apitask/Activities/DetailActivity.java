@@ -5,7 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.MenuItem;
 
-import com.example.osama.apitask.Model.News;
+import com.example.osama.apitask.model.News;
 import com.example.osama.apitask.R;
 import com.example.osama.apitask.databinding.ActivityDetailBinding;
 

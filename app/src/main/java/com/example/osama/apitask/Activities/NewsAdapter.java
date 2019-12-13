@@ -5,8 +5,8 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.ViewGroup;
 
-import com.example.osama.apitask.ClickHandler.DetailsIntent;
-import com.example.osama.apitask.Model.News;
+import com.example.osama.apitask.clickHandler.DetailsIntent;
+import com.example.osama.apitask.model.News;
 import com.example.osama.apitask.databinding.NewsDataBinding;
 
 import java.util.List;

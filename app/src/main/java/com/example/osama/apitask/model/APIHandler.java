@@ -1,4 +1,4 @@
-package com.example.osama.apitask.Model;
+package com.example.osama.apitask.model;
 
 import com.google.gson.annotations.SerializedName;
 

@@ -1,11 +1,11 @@
-package com.example.osama.apitask.ClickHandler;
+package com.example.osama.apitask.clickHandler;
 
 import android.content.Context;
 import android.content.Intent;
 import android.view.View;
 
 import com.example.osama.apitask.Activities.DetailActivity;
-import com.example.osama.apitask.Model.News;
+import com.example.osama.apitask.model.News;
 
 public class DetailsIntent {
     private final Context context;

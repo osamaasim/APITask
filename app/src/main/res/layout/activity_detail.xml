@@ -7,7 +7,7 @@
 
         <variable
             name="news"
-            type="com.example.osama.apitask.Model.News" />
+            type="com.example.osama.apitask.model.News" />
     </data>
 
     <LinearLayout
@@ -17,7 +17,7 @@
         android:focusable="true"
         android:foreground="?android:attr/selectableItemBackground"
         android:orientation="vertical">
-        <!--Photo Image android:src="@{news.photoUrl}"-->
+        <!--Photo Image android:src="@{news.multimedia.url}"-->
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="150dp"
