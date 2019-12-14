@@ -11,6 +11,7 @@ Following **requirements** have been met:
 * [x] Good Architectural Pattern: MVVM
 * [x] Generic, Simple Reusable code
 * [x] Code written following Android Coding Standards
+* [x] Android Lint for static code analysis
 * [x] Instructions on how to import and run the code
 
 ## Instructions
