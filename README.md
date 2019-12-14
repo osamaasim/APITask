@@ -33,3 +33,9 @@ gradlew installDebug
 ```
 
 ## Screenshots
+
+<b>Main article list Screen</b>
+<img src="master.jpg" alt="Main article list"/>
+
+<b>Details View Screen</b>
+<img src="detail.jpg" alt="Details View Screen"/>
